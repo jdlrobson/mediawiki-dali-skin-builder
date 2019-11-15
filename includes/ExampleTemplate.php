@@ -9,6 +9,7 @@ class ExampleTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
+		$language = $this->getSkin()->getLanguage();
 		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
 		echo $this->get( 'headelement' ) . $templateParser->processTemplate( 'skin', [
 			'html-notices' => $this->getSiteNotice() . $this->getNewTalk(),
@@ -23,7 +24,10 @@ class ExampleTemplate extends BaseTemplate {
 			'html-undelete' => $this->get( 'undelete' ),
 			'html-dataaftercontent' => $this->getDataAfterContent() . $this->get( 'debughtml' ),
 			'html-navigationheading' => $this->getMsg( 'navigation-heading' )->parse(),
-			'html-logo' => $this->getLogo(),
+			'logo' => [
+				'text' => $language->convert( $this->getMsg( 'sitetitle' )->escaped() ),
+				'href' => $this->data['nav_urls']['mainpage']['href'],
+			] + Linker::tooltipAndAccesskeyAttribs( 'p-logo' ),
 			'html-search' => $this->getSearch(),
 			'html-usertools' => $this->getUserLinks(),
 			'html-pagetools' => $this->getPageLinks(),
@@ -31,49 +35,6 @@ class ExampleTemplate extends BaseTemplate {
 			'html-footer' => $this->getFooterBlock(),
 			'pagelanguage' => $this->get( 'pageLanguage' ),
 		] ) . $this->getTrail() . '</body></html>';
-	}
-
-	/**
-	 * Generates the logo and (optionally) site title
-	 * @param string $id
-	 * @param bool $imageOnly Whether or not to generate the logo with only the image,
-	 * or with a text link as well
-	 *
-	 * @return string html
-	 */
-	protected function getLogo( $id = 'p-logo', $imageOnly = false ) {
-		$html = Html::openElement(
-			'div',
-			[
-				'id' => $id,
-				'class' => 'mw-portlet',
-				'role' => 'banner'
-			]
-		);
-		$html .= Html::element(
-			'a',
-			[
-				'href' => $this->data['nav_urls']['mainpage']['href'],
-				'class' => 'mw-wiki-logo',
-			] + Linker::tooltipAndAccesskeyAttribs( 'p-logo' )
-		);
-		if ( !$imageOnly ) {
-			$language = $this->getSkin()->getLanguage();
-			$siteTitle = $language->convert( $this->getMsg( 'sitetitle' )->escaped() );
-
-			$html .= Html::rawElement(
-				'a',
-				[
-					'id' => 'p-banner',
-					'class' => 'mw-wiki-title',
-					'href' => $this->data['nav_urls']['mainpage']['href']
-				] + Linker::tooltipAndAccesskeyAttribs( 'p-logo' ),
-				$siteTitle
-			);
-		}
-		$html .= Html::closeElement( 'div' );
-
-		return $html;
 	}
 
 	/**

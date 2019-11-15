@@ -1,3 +1,12 @@
+<header>
+    <div id="p-logo" class="mw-portlet" role="banner">
+        {{#logo}}
+        <a href="{{href}}" class="mw-wiki-logo" title="{{title}}">
+            {{text}}
+        </a>
+        {{/logo}}
+    </div>
+</header>
 <div id="mw-wrapper">
     <div class="mw-body" "id"="content" "role"="main">
         {{{html-notices}}}
@@ -17,7 +26,6 @@
         </div>
         <div id="mw-navigation">
             <h2>{{{html-navigationheading}}}</h2>
-            {{{html-logo}}}
             {{{html-search}}}
             <div id="user-tools">{{{html-usertools}}}</div>
             <div id="page-tools">{{{html-pagetools}}}</div>
