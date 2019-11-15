@@ -22,23 +22,9 @@
 		"skins.example": {
 			"class": "ResourceLoaderSkinModule",
 			"features": [ "elements", "content", "interface", "logo" ],
-			"styles": {
-				"resources/libraries/normalise.css": {
-					"media": "screen"
-				},
-				"resources/screen-common.less": {
-					"media": "screen"
-				},
-				"resources/screen-desktop.less": {
-					"media": "screen and (min-width: 751px)"
-				},
-				"resources/screen-mobile.less": {
-					"media": "screen and (max-width: 750px)"
-				},
-				"resources/print.css": {
-					"media": "print"
-				}
-			}
+			"styles": [
+				"resources/main.less"
+			]
 		},
 		"skins.example.js": {
 			"scripts": [
