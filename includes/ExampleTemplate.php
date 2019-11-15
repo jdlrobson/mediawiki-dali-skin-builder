@@ -25,11 +25,10 @@ class ExampleTemplate extends BaseTemplate {
 			'indicators' =>  $this->getRawIndicators(),
 			'html-pagetitle' => $this->get( 'title' ),
 			'html-tagline' => $this->getMsg( 'tagline' )->parse(),
-			'html-pagesubtitle' => $this->getPageSubtitle(),
+			'html-pagesubtitle' => $this->getPageSubtitle() . Html::rawElement( 'p', [], $this->get( 'undelete' ) ),
 			'html-bodycontent' => $this->get( 'bodycontent' ),
 			'html-printfooter' => $this->get( 'printfooter' ),
 			'html-categorylinks' => $this->getCategoryLinks(),
-			'html-undelete' => $this->get( 'undelete' ),
 			'html-dataaftercontent' => $this->getDataAfterContent() . $this->get( 'debughtml' ),
 			'html-navigationheading' => $this->getMsg( 'navigation-heading' )->parse(),
 			'logo' => [
