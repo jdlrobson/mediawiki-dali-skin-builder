@@ -4,10 +4,10 @@
  *
  * @ingroup Skins
  */
-class SkinExample extends SkinTemplate {
-	public $skinname = 'example',
-		$stylename = 'Example',
-		$template = 'ExampleTemplate';
+class Skin<uname> extends SkinTemplate {
+	public $skinname = '<name>',
+		$stylename = '<uname>',
+		$template = '<uname>Template';
 
 	/**
 	 * Add CSS via ResourceLoader
@@ -21,10 +21,10 @@ class SkinExample extends SkinTemplate {
 		);
 
 		$out->addModuleStyles( [
-			'skins.example'
+			'skins.<name>'
 		] );
 		$out->addModules( [
-			'skins.example.js'
+			'skins.<name>.js'
 		] );
 	}
 

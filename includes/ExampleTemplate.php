@@ -1,4 +1,5 @@
 <?php
+
 /**
  * BaseTemplate class for the Example skin
  *
