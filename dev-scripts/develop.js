@@ -9,7 +9,7 @@ const TITLE = demoData.title.replace( / /g, '_' );
 const KEY = (new Date()).toISOString().substr(0,10);
 
 const query = {};
-const params = document.location.search.split('?')[1].split('=');
+const params = document.location.search ? document.location.search.split('?')[1].split('=') : [];
 params.forEach((val, i) => {
     if ( i % 2 !== 0) {
         query[params[i-1]] = val;
