@@ -9,78 +9,31 @@ class ExampleTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
-		$html = '';
-		$html .= $this->get( 'headelement' );
-
-		$html .= Html::rawElement( 'div', [ 'id' => 'mw-wrapper' ],
-			Html::rawElement( 'div', [ 'class' => 'mw-body', 'id' => 'content', 'role' => 'main' ],
-				$this->getSiteNotice() .
-				$this->getNewTalk() .
-				$this->getIndicators() .
-				Html::rawElement( 'h1',
-					[
-						'class' => 'firstHeading',
-						'lang' => $this->get( 'pageLanguage' )
-					],
-					$this->get( 'title' )
-				) .
-				Html::rawElement( 'div', [ 'id' => 'siteSub' ],
-					$this->getMsg( 'tagline' )->parse()
-				) .
-				Html::rawElement( 'div', [ 'class' => 'mw-body-content' ],
-					Html::rawElement( 'div', [ 'id' => 'contentSub' ],
-						$this->getPageSubtitle() .
-						Html::rawElement(
-							'p',
-							[],
-							$this->get( 'undelete' )
-						)
-					) .
-					$this->get( 'bodycontent' ) .
-					$this->getClear() .
-					Html::rawElement( 'div', [ 'class' => 'printfooter' ],
-						$this->get( 'printfooter' )
-					) .
-					$this->getCategoryLinks()
-				) .
-				$this->getDataAfterContent() .
-				$this->get( 'debughtml' )
-			) .
-			Html::rawElement( 'div', [ 'id' => 'mw-navigation' ],
-				Html::rawElement(
-					'h2',
-					[],
-					$this->getMsg( 'navigation-heading' )->parse()
-				) .
-				$this->getLogo() .
-				$this->getSearch() .
-				// User profile links
-				Html::rawElement(
-					'div',
-					[ 'id' => 'user-tools' ],
-					$this->getUserLinks()
-				) .
-				// Page editing and tools
-				Html::rawElement(
-					'div',
-					[ 'id' => 'page-tools' ],
-					$this->getPageLinks()
-				) .
-				// Site navigation/sidebar
-				Html::rawElement(
-					'div',
-					[ 'id' => 'site-navigation' ],
-					$this->getSiteNavigation()
-				)
-			) .
-			$this->getFooterBlock()
-		);
-
-		$html .= $this->getTrail();
-		$html .= Html::closeElement( 'body' );
-		$html .= Html::closeElement( 'html' );
-
-		echo $html;
+		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
+		echo $templateParser->processTemplate( 'skin', [
+			'html-skinstart' => $this->get( 'headelement' ),
+			'html-skinend' => $this->getTrail() . '</body></html>',
+			'html-sitenotice' => $this->getSiteNotice(),
+			'html-talknotice' => $this->getNewTalk(),
+			'html-indicators' => $this->getIndicators(),
+			'html-pagetitle' => $this->get( 'title' ),
+			'html-tagline' => $this->getMsg( 'tagline' )->parse(),
+			'html-pagesubtitle' => $this->getPageSubtitle(),
+			'html-bodycontent' => $this->get( 'bodycontent' ),
+			'html-clear' => $this->getClear(),
+			'html-printfooter' => $this->get( 'printfooter' ),
+			'html-categorylinks' => $this->getCategoryLinks(),
+			'html-undelete' => $this->get( 'undelete' ),
+			'html-dataaftercontent' => $this->getDataAfterContent() . $this->get( 'debughtml' ),
+			'html-navigationheading' => $this->getMsg( 'navigation-heading' )->parse(),
+			'html-logo' => $this->getLogo(),
+			'html-search' => $this->getSearch(),
+			'html-usertools' => $this->getUserLinks(),
+			'html-pagetools' => $this->getPageLinks(),
+			'html-sitenavigation' => $this->getSiteNavigation(),
+			'html-footer' => $this->getFooterBlock(),
+			'pagelanguage' => $this->get( 'pageLanguage' ),
+		] );
 	}
 
 	/**
