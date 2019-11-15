@@ -23,12 +23,12 @@
 			"class": "ResourceLoaderSkinModule",
 			"features": [ "elements", "content", "interface", "logo" ],
 			"styles": [
-				"resources/main.less"
+				"src/example/index.less"
 			]
 		},
 		"skins.example.js": {
 			"scripts": [
-				"resources/main.js"
+				"src/example/index.js"
 			]
 		}
 	},

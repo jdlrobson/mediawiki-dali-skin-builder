@@ -1,13 +1,14 @@
-import './resources/main.less';
-import './resources/main.js';
-import demoData from './test/data/demo.json';
+import '../src/skin.less';
+import '../src/skin.js';
+import fetch from 'node-fetch';
+import demoData from '../test/data/demo.json';
 import mustache from 'mustache';
 import fs from 'fs'
 
 const HOST = 'https://en.wikipedia.org';
-const TITLE = demoData['html-pagetitle'];
+const TITLE = demoData.title.replace( / /g, '_' );
 
-const template = fs.readFileSync(__dirname + '/templates/skin.mustache', 'utf8' );
+const template = fs.readFileSync( __dirname + '/../src/skin.mustache', 'utf8' );
 const KEY = (new Date()).toISOString().substr(0,10);
 
 let dataPromise;

@@ -19,7 +19,7 @@ class ExampleTemplate extends BaseTemplate {
 	public function execute() {
 		$language = $this->getSkin()->getLanguage();
 
-		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
+		$templateParser = new TemplateParser( __DIR__ . '/../src' );
 		echo $this->get( 'headelement' ) . $templateParser->processTemplate( 'skin', [
 			'html-notices' => $this->getSiteNotice() . $this->getNewTalk(),
 			'indicators' =>  $this->getRawIndicators(),

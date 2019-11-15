@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"dev": "parcel demo.html",
+		"start": "parcel dev-scripts/develop.html",
 		"test": "grunt test"
 	},
 	"devDependencies": {
@@ -13,6 +13,7 @@
 		"mustache": "3.1.0",
 		"parcel-bundler": "1.12.4",
 		"less": "3.10.3",
+		"node-fetch": "2.6.0",
 		"stylelint-config-wikimedia": "0.5.0"
 	}
 }
