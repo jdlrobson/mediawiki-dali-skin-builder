@@ -11,6 +11,12 @@
     "html-undelete": "",
     "html-dataaftercontent": "",
     "html-navigationheading": "Navigation menu",
+    "indicators": [
+        {
+            "id": "mw-indicator-pp-default",
+            "html": "<a href=\"/wiki/Wikipedia:Protection_policy#semi\" title=\"This article is semi-protected.\"><img alt=\"Page semi-protected\" src=\"//upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/20px-Semi-protection-shackle.svg.png\" decoding=\"async\" srcset=\"//upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/30px-Semi-protection-shackle.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/1/1b/Semi-protection-shackle.svg/40px-Semi-protection-shackle.svg.png 2x\" data-file-width=\"512\" data-file-height=\"512\" width=\"20\" height=\"20\"></a>"
+        }
+    ],
     "logo": {
         "text": "Dali MediaWiki skin designer",
         "title": "Dali MediaWiki skin designer",

@@ -5,15 +5,24 @@
  * @ingroup Skins
  */
 class ExampleTemplate extends BaseTemplate {
+	public function getRawIndicators() {
+		$indicators = [];
+		foreach ( $this->data['indicators'] as $id => $content ) {
+			$indicators[] = [ 'id' => $id, 'html' => $content ];
+		}
+		return $indicators;
+	}
+
 	/**
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
 		$language = $this->getSkin()->getLanguage();
+
 		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
 		echo $this->get( 'headelement' ) . $templateParser->processTemplate( 'skin', [
 			'html-notices' => $this->getSiteNotice() . $this->getNewTalk(),
-			'html-indicators' => $this->getIndicators(),
+			'indicators' =>  $this->getRawIndicators(),
 			'html-pagetitle' => $this->get( 'title' ),
 			'html-tagline' => $this->getMsg( 'tagline' )->parse(),
 			'html-pagesubtitle' => $this->getPageSubtitle(),

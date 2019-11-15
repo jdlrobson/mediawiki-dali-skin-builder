@@ -11,6 +11,11 @@
     <div class="mw-body" "id"="content" "role"="main">
         {{{html-notices}}}
         {{{html-indicators}}}
+        <div class="mw-indicators mw-body-content">
+            {{#indicators}}
+                <div id="{{id}}">{{{html}}}</div>
+            {{/indicators}}
+        </div>
         <h1 class="firstHeading" lang="{{pagelanguage}}">{{{html-pagetitle}}}</h1>
         <div id="siteSub">{{{html-tagline}}}</div>
         <div class="mw-body-content">
