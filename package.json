@@ -1,6 +1,7 @@
 {
 	"private": true,
 	"scripts": {
+		"dev": "parcel demo.html",
 		"test": "grunt test"
 	},
 	"devDependencies": {
@@ -9,6 +10,9 @@
 		"grunt-contrib-jshint": "1.1.0",
 		"grunt-jsonlint": "1.1.0",
 		"grunt-stylelint": "0.10.1",
+		"mustache": "3.1.0",
+		"parcel-bundler": "1.12.4",
+		"less": "3.10.3",
 		"stylelint-config-wikimedia": "0.5.0"
 	}
 }
