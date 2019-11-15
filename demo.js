@@ -5,7 +5,7 @@ import mustache from 'mustache';
 import fs from 'fs'
 
 const HOST = 'https://en.wikipedia.org';
-const TITLE = 'Salvador_Dalí';
+const TITLE = demoData['html-pagetitle'];
 
 const template = fs.readFileSync(__dirname + '/templates/skin.mustache', 'utf8' );
 const KEY = (new Date()).toISOString().substr(0,10);
