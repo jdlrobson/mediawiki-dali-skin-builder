@@ -27,7 +27,6 @@ class ExampleTemplate extends BaseTemplate {
 			'html-tagline' => $this->getMsg( 'tagline' )->parse(),
 			'html-pagesubtitle' => $this->getPageSubtitle(),
 			'html-bodycontent' => $this->get( 'bodycontent' ),
-			'html-clear' => $this->getClear(),
 			'html-printfooter' => $this->get( 'printfooter' ),
 			'html-categorylinks' => $this->getCategoryLinks(),
 			'html-undelete' => $this->get( 'undelete' ),
