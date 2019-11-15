@@ -10,11 +10,8 @@ class ExampleTemplate extends BaseTemplate {
 	 */
 	public function execute() {
 		$templateParser = new TemplateParser( __DIR__ . '/../templates' );
-		echo $templateParser->processTemplate( 'skin', [
-			'html-skinstart' => $this->get( 'headelement' ),
-			'html-skinend' => $this->getTrail() . '</body></html>',
-			'html-sitenotice' => $this->getSiteNotice(),
-			'html-talknotice' => $this->getNewTalk(),
+		echo $this->get( 'headelement' ) . $templateParser->processTemplate( 'skin', [
+			'html-notices' => $this->getSiteNotice() . $this->getNewTalk(),
 			'html-indicators' => $this->getIndicators(),
 			'html-pagetitle' => $this->get( 'title' ),
 			'html-tagline' => $this->getMsg( 'tagline' )->parse(),
@@ -33,7 +30,7 @@ class ExampleTemplate extends BaseTemplate {
 			'html-sitenavigation' => $this->getSiteNavigation(),
 			'html-footer' => $this->getFooterBlock(),
 			'pagelanguage' => $this->get( 'pageLanguage' ),
-		] );
+		] ) . $this->getTrail() . '</body></html>';
 	}
 
 	/**
