@@ -16,7 +16,7 @@ function getUserInput( msg ) {
     })
 }
 
-getUserInput( 'What shall we call your skin?' ).then( function ( name ) {
+getUserInput( 'What is the name of skin folder you are working in?' ).then( function ( name ) {
     const i18n = {};
     const qqq = {};
     const uppercaseName = name.charAt(0).toUpperCase() + name.substr(1);
@@ -58,22 +58,21 @@ getUserInput( 'What shall we call your skin?' ).then( function ( name ) {
 
     console.log('Copy src files');
     const packageFiles = [];
-    fs.readdirSync(`${rootdir}/src`).forEach((name) => {
-        console.log(name);
-        if ( name.indexOf( '.js' ) > -1 ) {
-            packageFiles.push(name);
+    fs.readdirSync(`${rootdir}/src/${name}`).forEach((filename) => {
+        if ( filename.indexOf( '.js' ) > -1 && filename !== 'index.js' ) {
+            packageFiles.push(`src/${filename}`);
         }
         // #todo: copy recursively.
-        fs.copyFileSync(`${rootdir}/src/${name}`, `${outsrcdir}/${name}`);
+        fs.copyFileSync(`${rootdir}/src/${name}/${filename}`, `${outsrcdir}/${filename}`);
     });
-    skin.ResourceModules[`skin.${name}`] = {
+    skin.ResourceModules[`skins.${name}`] = {
         class: "ResourceLoaderSkinModule",
         features: [ "elements", "content", "interface", "logo" ],
         styles: [
             "src/skin.less"
         ]
     };
-    skin.ResourceModules[`skin.${name}.js`] = {
+    skin.ResourceModules[`skins.${name}.js`] = {
         packageFiles: [
             'src/skin.js'
         ].concat( packageFiles )
@@ -93,7 +92,7 @@ getUserInput( 'What shall we call your skin?' ).then( function ( name ) {
 
     const screenshot = `${screenshotdir}/1280x800.png`;
     console.log('Building screenshot');
-    webshot('http://localhost:61364', screenshot,
+    webshot(`http://localhost:8142?skin=${name}`, screenshot,
         function(err) {
             return new Promise( ( resolve ) => {
                 const timeout = setInterval( function () {

@@ -1,0 +1,46 @@
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	{{{html-notices}}}
+	<div class="mw-indicators mw-body-content">
+		{{#indicators}}
+			<div id="{{id}}">{{{html}}}</div>
+		{{/indicators}}
+	</div>
+	<h1 id="firstHeading"
+		class="firstHeading" lang="{{pagelanguage}}">{{{html-pagetitle}}}</h1>
+	<div id="bodyContent" class="mw-body-content">
+    <div id="siteSub">{{{html-tagline}}}</div>
+	{{{html-pagesubtitle}}}
+	{{{html-bodycontent}}}
+	{{{html-categorylinks}}}
+	{{{dataAfterContent}}}
+	<div class="visualClear"></div>
+</div>
+</div>
+<div id="mw-navigation">
+<h2>{{messages.navigation-heading}}</h2>
+
+<div id="mw-head">
+	{{{html-usertools}}}
+	<div id="left-navigation" class="vectorTabs">
+		{{{html-namespaces}}}
+		{{{html-variants}}}
+	</div>
+	<div id="right-navigation" class="vectorTabs">
+		{{{html-views}}}
+		{{{html-actions}}}
+		{{{html-search}}}
+	</div>
+</div>
+<div id="mw-panel">
+	<div id="p-logo" role="banner">
+		{{#logo}}
+        <a href="{{href}}" class="mw-wiki-logo" title="{{title}}">
+        </a>
+        {{/logo}}
+	</div>
+	{{{html-sitenavigation}}}
+</div>
+{{{html-footer}}}

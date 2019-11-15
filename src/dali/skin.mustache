@@ -10,7 +10,6 @@
 <div id="mw-wrapper">
     <div class="mw-body" "id"="content" "role"="main">
         {{{html-notices}}}
-        {{{html-indicators}}}
         <div class="mw-indicators mw-body-content">
             {{#indicators}}
                 <div id="{{id}}">{{{html}}}</div>
@@ -32,7 +31,12 @@
             <h2>{{{html-navigationheading}}}</h2>
             {{{html-search}}}
             <div id="user-tools">{{{html-usertools}}}</div>
-            <div id="page-tools">{{{html-pagetools}}}</div>
+            <div id="page-tools">
+                {{{html-namespaces}}}
+                {{{html-variants}}}
+                {{{html-views}}}
+                {{{html-actions}}}
+            </div>
             <div id="site-navigation">{{{html-sitenavigation}}}</div>
         </div>
         {{{html-footer}}}

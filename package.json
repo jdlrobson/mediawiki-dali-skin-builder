@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"start": "export PORT=8142 && parcel dev-scripts/develop.html",
+		"start": "export PORT=8142 && parcel dev-scripts/index.html",
 		"build": "node dev-scripts/build.js",
 		"test": "grunt test"
 	},

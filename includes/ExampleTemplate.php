@@ -38,7 +38,21 @@ class ExampleTemplate extends BaseTemplate {
 			] + Linker::tooltipAndAccesskeyAttribs( 'p-logo' ),
 			'html-search' => $this->getSearch(),
 			'html-usertools' => $this->getUserLinks(),
-			'html-pagetools' => $this->getPageLinks(),
+			'html-namespaces' => $this->getPortlet(
+				'namespaces',
+				$this->data['content_navigation']['namespaces']
+			),
+			// Language variant options
+			'html-variants' => $this->getVariants(),
+			'html-views' =>	$html = $this->getPortlet(
+				'views',
+				$this->data['content_navigation']['views']
+			),
+			// Other actions for the page: move, delete, protect, everything else
+			'html-actions' => $this->getPortlet(
+				'actions',
+				$this->data['content_navigation']['actions']
+			),
 			'html-sitenavigation' => $this->getSiteNavigation(),
 			'html-footer' => $this->getFooterBlock(),
 			'pagelanguage' => $this->get( 'pageLanguage' ),
@@ -143,34 +157,6 @@ class ExampleTemplate extends BaseTemplate {
 				$this->data['content_navigation']['variants']
 			);
 		}
-
-		return $html;
-	}
-
-	/**
-	 * Generates page-related tools/links
-	 * You will probably want to split this up and move all of these to somewhere that makes sense for your skin.
-	 * @return string html
-	 */
-	protected function getPageLinks() {
-		// Namespaces: links for 'content' and 'talk' for namespaces with talkpages. Otherwise is just the content.
-		// Usually rendered as tabs on the top of the page.
-		$html = $this->getPortlet(
-			'namespaces',
-			$this->data['content_navigation']['namespaces']
-		);
-		// Language variant options
-		$html .= $this->getVariants();
-		// 'View' actions for the page: view, edit, view history, etc
-		$html .= $this->getPortlet(
-			'views',
-			$this->data['content_navigation']['views']
-		);
-		// Other actions for the page: move, delete, protect, everything else
-		$html .= $this->getPortlet(
-			'actions',
-			$this->data['content_navigation']['actions']
-		);
 
 		return $html;
 	}

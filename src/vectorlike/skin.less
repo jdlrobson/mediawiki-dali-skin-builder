@@ -1,0 +1,2202 @@
+#mw-panel #p-logo + .mw-portlet h3 {
+    display: none;
+}
+
+#mw-panel .mw-portlet .mw-portlet-body {
+    background-image: url(images/portal-separator.png);
+    background-image: linear-gradient(to right, transparent 0,#c8ccd1 35%,#c8ccd1 70%, transparent 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    margin-left: 0.5em;
+    padding-top: 0;
+}
+
+#mw-panel .mw-portlet h3 {
+    color:#444444;
+    font-weight: normal;
+    margin: 0.5em 0 0 0.66666667em;
+    padding: 0.25em 0;
+    cursor: default;
+    border: 0;
+    font-size: 0.75em;
+}
+
+	/* Thumbnails */
+	div.thumb {
+		margin-bottom: 0.5em;
+		width: auto;
+		background-color: transparent;
+	}
+	
+	div.thumbinner {
+		border: 1px solid #c8ccd1;
+		padding: 3px;
+		background-color: #f8f9fa;
+		font-size: 94%;
+		text-align: center;
+		/* new block formatting context,
+		 * to clear background from floating content */
+		overflow: hidden;
+	}
+	
+	html .thumbimage {
+		background-color: #fff;
+		border: 1px solid #c8ccd1;
+	}
+	
+	html .thumbcaption {
+		border: 0;
+		line-height: 1.4em;
+		padding: 3px;
+		font-size: 94%;
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+		text-align: left;
+	}
+	@media screen {
+	/**
+	 * MediaWiki style sheet for general styles on basic content elements
+	 *
+	 * Styles for basic elements: links, lists, etc...
+	 *
+	 * This style sheet is used by the Monobook and Vector skins.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Links */
+	a {
+		text-decoration: none;
+		color: #0645ad;
+		background: none;
+	}
+	
+	a:not( [ href ] ) {
+		cursor: pointer; /* Always cursor:pointer even without href */
+	}
+	
+	a:visited {
+		color: #0b0080;
+	}
+	
+	a:active {
+		color: #faa700;
+	}
+	
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+	
+	a:lang( ar ),
+	a:lang( kk-arab ),
+	a:lang( mzn ),
+	a:lang( ps ),
+	a:lang( ur ) {
+		text-decoration: none;
+	}
+	
+	a.stub {
+		color: #723;
+	}
+	
+	a.new,
+	#p-personal a.new {
+		color: #ba0000;
+	}
+	
+	/* self links */
+	a.mw-selflink {
+		color: inherit;
+		font-weight: bold;
+		text-decoration: inherit;
+	}
+	
+	a.mw-selflink:hover {
+		cursor: inherit;
+		text-decoration: inherit;
+	}
+	
+	a.mw-selflink:active,
+	a.mw-selflink:visited {
+		color: inherit;
+	}
+	
+	a.new:visited,
+	#p-personal a.new:visited {
+		color: #a55858;
+	}
+	
+	/* Interwiki Styling */
+	.mw-parser-output a.extiw,
+	.mw-parser-output a.extiw:active {
+		color: #36b;
+	}
+	
+	.mw-parser-output a.extiw:visited {
+		color: #636;
+	}
+	
+	.mw-parser-output a.extiw:active {
+		color: #b63;
+	}
+	
+	/* External links */
+	.mw-parser-output a.external {
+		color: #36b;
+	}
+	
+	.mw-parser-output a.external:visited {
+		color: #636; /* T5112 */
+	}
+	
+	.mw-parser-output a.external:active {
+		color: #b63;
+	}
+	
+	.mw-parser-output a.external.free {
+		word-wrap: break-word;
+	}
+	
+	/* Inline Elements */
+	img {
+		border: 0;
+		vertical-align: middle;
+	}
+	
+	hr {
+		height: 1px;
+		background-color: #a2a9b1;
+		border: 0;
+		margin: 0.2em 0;
+	}
+	
+	/* Structural Elements */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #000;
+		background: none;
+		font-weight: normal;
+		margin: 0;
+		overflow: hidden;
+		padding-top: 0.5em;
+		padding-bottom: 0.17em;
+		border-bottom: 1px solid #a2a9b1;
+	}
+	
+	h1 {
+		font-size: 188%;
+	}
+	
+	h2 {
+		font-size: 150%;
+	}
+	
+	h3,
+	h4,
+	h5,
+	h6 {
+		border-bottom: 0;
+		font-weight: bold;
+	}
+	
+	h3 {
+		font-size: 128%;
+	}
+	
+	h4 {
+		font-size: 116%;
+	}
+	
+	h5 {
+		font-size: 108%;
+	}
+	
+	h6 {
+		font-size: 100%;
+	}
+	
+	/* Some space under the headers in the content area */
+	h1,
+	h2 {
+		margin-bottom: 0.6em;
+	}
+	
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 0.3em;
+	}
+	
+	p {
+		margin: 0.4em 0 0.5em 0;
+	}
+	
+	p img {
+		margin: 0;
+	}
+	
+	ul {
+		margin: 0.3em 0 0 1.6em;
+		padding: 0;
+	}
+	
+	ol {
+		margin: 0.3em 0 0 3.2em;
+		padding: 0;
+		list-style-image: none;
+	}
+	
+	li {
+		margin-bottom: 0.1em;
+	}
+	
+	dt {
+		font-weight: bold;
+		margin-bottom: 0.1em;
+	}
+	
+	dl {
+		margin-top: 0.2em;
+		margin-bottom: 0.5em;
+	}
+	
+	dd {
+		margin-left: 1.6em;
+		margin-bottom: 0.1em;
+	}
+	
+	pre,
+	code,
+	tt,
+	kbd,
+	samp,
+	.mw-code {
+		/* Support: Blink, Gecko, Webkit; enable unified font sizes for monospace font. T176636 */
+		font-family: monospace, monospace;
+	}
+	
+	code {
+		color: #000;
+		background-color: #f8f9fa;
+		border: 1px solid #eaecf0;
+		border-radius: 2px;
+		padding: 1px 4px;
+	}
+	
+	pre,
+	.mw-code {
+		color: #000;
+		background-color: #f8f9fa;
+		border: 1px solid #eaecf0;
+		padding: 1em;
+		/* Wrap lines in overflow. T2260, T103780 */
+		white-space: pre-wrap;
+	}
+	
+	/* Tables */
+	table {
+		font-size: 100%;
+	}
+	
+	/* Forms */
+	fieldset {
+		border: 1px solid #2a4b8d;
+		margin: 1em 0 1em 0;
+		padding: 0 1em 1em;
+	}
+	
+	fieldset.nested {
+		margin: 0 0 0.5em 0;
+		padding: 0 0.5em 0.5em;
+	}
+	
+	legend {
+		padding: 0.5em;
+		font-size: 95%;
+	}
+	
+	form {
+		border: 0;
+		margin: 0;
+	}
+	
+	textarea {
+		width: 100%;
+		padding: 0.1em;
+		display: block;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	/* Emulate Center */
+	.center {
+		width: 100%;
+		text-align: center;
+	}
+	
+	*.center * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Small for tables and similar */
+	.small {
+		font-size: 94%;
+	}
+	
+	table.small {
+		font-size: 100%;
+	}
+	
+	/**
+	 * MediaWiki style sheet for general styles on complex content
+	 *
+	 * Styles for complex things which are a standard part of page content
+	 * (ie: the CSS classing built into the system), like the TOC.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Table of Contents */
+	.toc,
+	.mw-warning,
+	.toccolours {
+		border: 1px solid #a2a9b1;
+		background-color: #f8f9fa;
+		padding: 5px;
+		font-size: 95%;
+	}
+	
+	/**
+	 * We want to display the ToC element with intrinsic width in block mode. The fit-content
+	 * value for width is however not supported by large groups of browsers.
+	 *
+	 * We use display:table. Even though it should only contain other table-* display
+	 * elements, there are no known problems with using this.
+	 */
+	.toc {
+		display: table;
+		padding: 7px;
+	}
+	
+	/* CSS for backwards-compatibility with cached page renders and creative uses in wikitext */
+	table.toc {
+		border-collapse: collapse;
+	}
+	
+	/* Remove additional paddings inside table-cells that are not present in <div>s */
+	table.toc td {
+		padding: 0;
+	}
+	
+	.toc h2 {
+		display: inline;
+		border: 0;
+		padding: 0;
+		font-size: 100%;
+		font-weight: bold;
+	}
+	
+	.toc .toctitle {
+		text-align: center;
+	}
+	
+	.toc ul {
+		list-style-type: none;
+		list-style-image: none;
+		margin-left: 0;
+		padding: 0;
+		text-align: left;
+	}
+	
+	.toc ul ul {
+		margin: 0 0 0 2em;
+	}
+	
+	/* Separate columns for tocnumber and toctext */
+	.tocnumber,
+	.toctext {
+		display: table-cell;
+		/*
+		 * Text decorations are not propagated to the contents of inline blocks and inline tables,
+		 * according to <https://www.w3.org/TR/css-text-decor-3/#line-decoration>, and 'display: table-cell'
+		 * generates an inline table when used without any parent table-rows and tables.
+		 */
+		text-decoration: inherit;
+	}
+	
+	/* Space between the columns for tocnumber and toctext */
+	.tocnumber {
+		padding-left: 0;
+		padding-right: 0.5em;
+		color: #222;
+	}
+	/* @noflip */
+	.mw-content-ltr .tocnumber {
+		padding-left: 0;
+		padding-right: 0.5em;
+	}
+	
+	/* @noflip */
+	.mw-content-rtl .tocnumber {
+		padding-left: 0.5em;
+		padding-right: 0;
+	}
+	
+	/* Warning */
+	.mw-warning {
+		margin-left: 50px;
+		margin-right: 50px;
+		text-align: center;
+	}
+	
+	/* Images */
+	/* @noflip */
+	div.floatright,
+	table.floatright {
+		margin: 0 0 0.5em 0.5em;
+	}
+	
+	/* @noflip */
+	div.floatleft,
+	table.floatleft {
+		margin: 0 0.5em 0.5em 0;
+	}
+	
+	/* Thumbnails */
+	div.thumb {
+		margin-bottom: 0.5em;
+		width: auto;
+		background-color: transparent;
+	}
+	
+	div.thumbinner {
+		border: 1px solid #c8ccd1;
+		padding: 3px;
+		background-color: #f8f9fa;
+		font-size: 94%;
+		text-align: center;
+		/* new block formatting context,
+		 * to clear background from floating content */
+		overflow: hidden;
+	}
+	
+	html .thumbimage {
+		background-color: #fff;
+		border: 1px solid #c8ccd1;
+	}
+	
+	html .thumbcaption {
+		border: 0;
+		line-height: 1.4em;
+		padding: 3px;
+		font-size: 94%;
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+		text-align: left;
+	}
+	
+	div.magnify {
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+		float: right;
+		margin-left: 3px;
+	}
+	
+	div.magnify a {
+		display: block;
+		/* Hide the text… */
+		text-indent: 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		/* …and replace it with the image */
+		width: 15px;
+		height: 11px;
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+	
+		/* Use same SVG support hack as mediawiki.legacy's shared.css */
+		/* Don't annoy people who copy-paste everything too much */
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+	img.thumbborder {
+		border: 1px solid #eaecf0;
+	}
+	
+	/* Directionality-specific styles for thumbnails - their positioning depends on content language */
+	
+	/* @noflip */
+	.mw-content-ltr .thumbcaption {
+		text-align: left;
+	}
+	
+	/* @noflip */
+	.mw-content-ltr .magnify {
+		float: right;
+		margin-left: 3px;
+		margin-right: 0;
+	}
+	
+	
+	/* @noflip */
+	.mw-content-rtl .thumbcaption {
+		text-align: right;
+	}
+	
+	/* @noflip */
+	.mw-content-rtl .magnify {
+		float: left;
+		margin-left: 0;
+		margin-right: 3px;
+	}
+	
+	/* @noflip */
+	div.tright {
+		margin: 0.5em 0 1.3em 1.4em;
+	}
+	
+	/* @noflip */
+	div.tleft {
+		margin: 0.5em 1.4em 1.3em 0;
+	}
+	
+	/* Hide elements that are marked as "empty" according to legacy Tidy rules,
+	 * except if a client script removes the mw-hide-empty-elt class from the body
+	 */
+	body.mw-hide-empty-elt .mw-empty-elt {
+		display: none;
+	}
+	
+	/**
+	 * MediaWiki style sheet for common core styles on interfaces
+	 *
+	 * Styles for the Monobook/Vector pattern of laying out common interfaces.
+	 * These ids/classes are not built into the system,
+	 * they are outputted by the actual MonoBook/Vector code by convention.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Categories */
+	.catlinks {
+		border: 1px solid #a2a9b1;
+		background-color: #f8f9fa;
+		padding: 5px;
+		margin-top: 1em;
+		clear: both;
+	}
+	
+	textarea {
+		/* Support: Firefox */
+		/* Border rule required to override system appearance on Linux (T136415) */
+		border: 1px solid #c8ccd1;
+	}
+	
+	.editOptions {
+		background-color: #eaecf0;
+		color: #222;
+		border: 1px solid #c8ccd1;
+		border-top: 0;
+		padding: 1em 1em 1.5em 1em;
+		margin-bottom: 2em;
+	}
+	
+	.usermessage {
+		background-color: #ffce7b;
+		border: 1px solid #ffa500;
+		color: #000;
+		font-weight: bold;
+		margin: 2em 0 1em;
+		padding: 0.5em 1em;
+		vertical-align: middle;
+	}
+	
+	#siteNotice {
+		position: relative;
+		text-align: center;
+		margin: 0;
+	}
+	
+	#localNotice {
+		margin-bottom: 0.9em;
+	}
+	
+	.firstHeading {
+		margin-bottom: 0.1em;
+		/* These two rules hack around T4013 (fix for more limited T13325).
+		 * When T4013 is fixed properly, they should be removed. */
+		line-height: 1.2em;
+		padding-bottom: 0;
+	}
+	
+	/* Sub-navigation */
+	#siteSub {
+		display: none;
+	}
+	
+	#contentSub,
+	#contentSub2 {
+		font-size: 84%;
+		line-height: 1.2em;
+		margin: 0 0 1.4em 1em;
+		color: #54595d;
+		width: auto;
+	}
+	
+	span.subpages {
+		display: block;
+	}}
+@media screen {
+	/**
+	 * MediaWiki style sheet for general styles on basic content elements
+	 *
+	 * Styles for basic elements: links, lists, etc...
+	 *
+	 * This style sheet is used by the Monobook and Vector skins.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Links */
+	a {
+		text-decoration: none;
+		color: #0645ad;
+		background: none;
+	}
+	
+	a:not( [ href ] ) {
+		cursor: pointer; /* Always cursor:pointer even without href */
+	}
+	
+	a:visited {
+		color: #0b0080;
+	}
+	
+	a:active {
+		color: #faa700;
+	}
+	
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+	
+	a:lang( ar ),
+	a:lang( kk-arab ),
+	a:lang( mzn ),
+	a:lang( ps ),
+	a:lang( ur ) {
+		text-decoration: none;
+	}
+	
+	a.stub {
+		color: #723;
+	}
+	
+	a.new,
+	#p-personal a.new {
+		color: #ba0000;
+	}
+	
+	/* self links */
+	a.mw-selflink {
+		color: inherit;
+		font-weight: bold;
+		text-decoration: inherit;
+	}
+	
+	a.mw-selflink:hover {
+		cursor: inherit;
+		text-decoration: inherit;
+	}
+	
+	a.mw-selflink:active,
+	a.mw-selflink:visited {
+		color: inherit;
+	}
+	
+	a.new:visited,
+	#p-personal a.new:visited {
+		color: #a55858;
+	}
+	
+	/* Interwiki Styling */
+	.mw-parser-output a.extiw,
+	.mw-parser-output a.extiw:active {
+		color: #36b;
+	}
+	
+	.mw-parser-output a.extiw:visited {
+		color: #636;
+	}
+	
+	.mw-parser-output a.extiw:active {
+		color: #b63;
+	}
+	
+	/* External links */
+	.mw-parser-output a.external {
+		color: #36b;
+	}
+	
+	.mw-parser-output a.external:visited {
+		color: #636; /* T5112 */
+	}
+	
+	.mw-parser-output a.external:active {
+		color: #b63;
+	}
+	
+	.mw-parser-output a.external.free {
+		word-wrap: break-word;
+	}
+	
+	/* Inline Elements */
+	img {
+		border: 0;
+		vertical-align: middle;
+	}
+	
+	hr {
+		height: 1px;
+		background-color: #a2a9b1;
+		border: 0;
+		margin: 0.2em 0;
+	}
+	
+	/* Structural Elements */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #000;
+		background: none;
+		font-weight: normal;
+		margin: 0;
+		overflow: hidden;
+		padding-top: 0.5em;
+		padding-bottom: 0.17em;
+		border-bottom: 1px solid #a2a9b1;
+	}
+	
+	h1 {
+		font-size: 188%;
+	}
+	
+	h2 {
+		font-size: 150%;
+	}
+	
+	h3,
+	h4,
+	h5,
+	h6 {
+		border-bottom: 0;
+		font-weight: bold;
+	}
+	
+	h3 {
+		font-size: 128%;
+	}
+	
+	h4 {
+		font-size: 116%;
+	}
+	
+	h5 {
+		font-size: 108%;
+	}
+	
+	h6 {
+		font-size: 100%;
+	}
+	
+	/* Some space under the headers in the content area */
+	h1,
+	h2 {
+		margin-bottom: 0.6em;
+	}
+	
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 0.3em;
+	}
+	
+	p {
+		margin: 0.4em 0 0.5em 0;
+	}
+	
+	p img {
+		margin: 0;
+	}
+	
+	ul {
+		margin: 0.3em 0 0 1.6em;
+		padding: 0;
+	}
+	
+	ol {
+		margin: 0.3em 0 0 3.2em;
+		padding: 0;
+		list-style-image: none;
+	}
+	
+	li {
+		margin-bottom: 0.1em;
+	}
+	
+	dt {
+		font-weight: bold;
+		margin-bottom: 0.1em;
+	}
+	
+	dl {
+		margin-top: 0.2em;
+		margin-bottom: 0.5em;
+	}
+	
+	dd {
+		margin-left: 1.6em;
+		margin-bottom: 0.1em;
+	}
+	
+	pre,
+	code,
+	tt,
+	kbd,
+	samp,
+	.mw-code {
+		/* Support: Blink, Gecko, Webkit; enable unified font sizes for monospace font. T176636 */
+		font-family: monospace, monospace;
+	}
+	
+	code {
+		color: #000;
+		background-color: #f8f9fa;
+		border: 1px solid #eaecf0;
+		border-radius: 2px;
+		padding: 1px 4px;
+	}
+	
+	pre,
+	.mw-code {
+		color: #000;
+		background-color: #f8f9fa;
+		border: 1px solid #eaecf0;
+		padding: 1em;
+		/* Wrap lines in overflow. T2260, T103780 */
+		white-space: pre-wrap;
+	}
+	
+	/* Tables */
+	table {
+		font-size: 100%;
+	}
+	
+	/* Forms */
+	fieldset {
+		border: 1px solid #2a4b8d;
+		margin: 1em 0 1em 0;
+		padding: 0 1em 1em;
+	}
+	
+	fieldset.nested {
+		margin: 0 0 0.5em 0;
+		padding: 0 0.5em 0.5em;
+	}
+	
+	legend {
+		padding: 0.5em;
+		font-size: 95%;
+	}
+	
+	form {
+		border: 0;
+		margin: 0;
+	}
+	
+	textarea {
+		width: 100%;
+		padding: 0.1em;
+		display: block;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	
+	/* Emulate Center */
+	.center {
+		width: 100%;
+		text-align: center;
+	}
+	
+	*.center * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Small for tables and similar */
+	.small {
+		font-size: 94%;
+	}
+	
+	table.small {
+		font-size: 100%;
+	}
+	
+	/**
+	 * MediaWiki style sheet for general styles on complex content
+	 *
+	 * Styles for complex things which are a standard part of page content
+	 * (ie: the CSS classing built into the system), like the TOC.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Table of Contents */
+	.toc,
+	.mw-warning,
+	.toccolours {
+		border: 1px solid #a2a9b1;
+		background-color: #f8f9fa;
+		padding: 5px;
+		font-size: 95%;
+	}
+	
+	/**
+	 * We want to display the ToC element with intrinsic width in block mode. The fit-content
+	 * value for width is however not supported by large groups of browsers.
+	 *
+	 * We use display:table. Even though it should only contain other table-* display
+	 * elements, there are no known problems with using this.
+	 */
+	.toc {
+		display: table;
+		padding: 7px;
+	}
+	
+	/* CSS for backwards-compatibility with cached page renders and creative uses in wikitext */
+	table.toc {
+		border-collapse: collapse;
+	}
+	
+	/* Remove additional paddings inside table-cells that are not present in <div>s */
+	table.toc td {
+		padding: 0;
+	}
+	
+	.toc h2 {
+		display: inline;
+		border: 0;
+		padding: 0;
+		font-size: 100%;
+		font-weight: bold;
+	}
+	
+	.toc .toctitle {
+		text-align: center;
+	}
+	
+	.toc ul {
+		list-style-type: none;
+		list-style-image: none;
+		margin-left: 0;
+		padding: 0;
+		text-align: left;
+	}
+	
+	.toc ul ul {
+		margin: 0 0 0 2em;
+	}
+	
+	/* Separate columns for tocnumber and toctext */
+	.tocnumber,
+	.toctext {
+		display: table-cell;
+		/*
+		 * Text decorations are not propagated to the contents of inline blocks and inline tables,
+		 * according to <https://www.w3.org/TR/css-text-decor-3/#line-decoration>, and 'display: table-cell'
+		 * generates an inline table when used without any parent table-rows and tables.
+		 */
+		text-decoration: inherit;
+	}
+	
+	/* Space between the columns for tocnumber and toctext */
+	.tocnumber {
+		padding-left: 0;
+		padding-right: 0.5em;
+		color: #222;
+	}
+	/* @noflip */
+	.mw-content-ltr .tocnumber {
+		padding-left: 0;
+		padding-right: 0.5em;
+	}
+	
+	/* @noflip */
+	.mw-content-rtl .tocnumber {
+		padding-left: 0.5em;
+		padding-right: 0;
+	}
+	
+	/* Warning */
+	.mw-warning {
+		margin-left: 50px;
+		margin-right: 50px;
+		text-align: center;
+	}
+	
+	/* Images */
+	/* @noflip */
+	div.floatright,
+	table.floatright {
+		margin: 0 0 0.5em 0.5em;
+	}
+	
+	/* @noflip */
+	div.floatleft,
+	table.floatleft {
+		margin: 0 0.5em 0.5em 0;
+	}
+	
+	/* Thumbnails */
+	div.thumb {
+		margin-bottom: 0.5em;
+		width: auto;
+		background-color: transparent;
+	}
+	
+	div.thumbinner {
+		border: 1px solid #c8ccd1;
+		padding: 3px;
+		background-color: #f8f9fa;
+		font-size: 94%;
+		text-align: center;
+		/* new block formatting context,
+		 * to clear background from floating content */
+		overflow: hidden;
+	}
+	
+	html .thumbimage {
+		background-color: #fff;
+		border: 1px solid #c8ccd1;
+	}
+	
+	html .thumbcaption {
+		border: 0;
+		line-height: 1.4em;
+		padding: 3px;
+		font-size: 94%;
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+		text-align: left;
+	}
+	
+	div.magnify {
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+		float: right;
+		margin-left: 3px;
+	}
+	
+	div.magnify a {
+		display: block;
+		/* Hide the text… */
+		text-indent: 15px;
+		white-space: nowrap;
+		overflow: hidden;
+		/* …and replace it with the image */
+		width: 15px;
+		height: 11px;
+		/* Default styles when there's no .mw-content-ltr or .mw-content-rtl, overridden below */
+-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+	img.thumbborder {
+		border: 1px solid #eaecf0;
+	}
+	
+	/* Directionality-specific styles for thumbnails - their positioning depends on content language */
+	
+	/* @noflip */
+	.mw-content-ltr .thumbcaption {
+		text-align: left;
+	}
+	
+	/* @noflip */
+	.mw-content-ltr .magnify {
+		float: right;
+		margin-left: 3px;
+		margin-right: 0;
+	}
+	
+	
+	/* @noflip */
+	.mw-content-rtl .thumbcaption {
+		text-align: right;
+	}
+	
+	/* @noflip */
+	.mw-content-rtl .magnify {
+		float: left;
+		margin-left: 0;
+		margin-right: 3px;
+	}
+
+	
+	/* @noflip */
+	div.tright {
+		margin: 0.5em 0 1.3em 1.4em;
+	}
+	
+	/* @noflip */
+	div.tleft {
+		margin: 0.5em 1.4em 1.3em 0;
+	}
+	
+	/* Hide elements that are marked as "empty" according to legacy Tidy rules,
+	 * except if a client script removes the mw-hide-empty-elt class from the body
+	 */
+	body.mw-hide-empty-elt .mw-empty-elt {
+		display: none;
+	}
+	
+	/**
+	 * MediaWiki style sheet for common core styles on interfaces
+	 *
+	 * Styles for the Monobook/Vector pattern of laying out common interfaces.
+	 * These ids/classes are not built into the system,
+	 * they are outputted by the actual MonoBook/Vector code by convention.
+	 */
+	
+	/* stylelint-disable selector-class-pattern */
+	
+	/* Categories */
+	.catlinks {
+		border: 1px solid #a2a9b1;
+		background-color: #f8f9fa;
+		padding: 5px;
+		margin-top: 1em;
+		clear: both;
+	}
+	
+	textarea {
+		/* Support: Firefox */
+		/* Border rule required to override system appearance on Linux (T136415) */
+		border: 1px solid #c8ccd1;
+	}
+	
+	.editOptions {
+		background-color: #eaecf0;
+		color: #222;
+		border: 1px solid #c8ccd1;
+		border-top: 0;
+		padding: 1em 1em 1.5em 1em;
+		margin-bottom: 2em;
+	}
+	
+	.usermessage {
+		background-color: #ffce7b;
+		border: 1px solid #ffa500;
+		color: #000;
+		font-weight: bold;
+		margin: 2em 0 1em;
+		padding: 0.5em 1em;
+		vertical-align: middle;
+	}
+	
+	#siteNotice {
+		position: relative;
+		text-align: center;
+		margin: 0;
+	}
+	
+	#localNotice {
+		margin-bottom: 0.9em;
+	}
+	
+	.firstHeading {
+		margin-bottom: 0.1em;
+		/* These two rules hack around T4013 (fix for more limited T13325).
+		 * When T4013 is fixed properly, they should be removed. */
+		line-height: 1.2em;
+		padding-bottom: 0;
+	}
+	
+	/* Sub-navigation */
+	#siteSub {
+		display: none;
+	}
+	
+	#contentSub,
+	#contentSub2 {
+		font-size: 84%;
+		line-height: 1.2em;
+		margin: 0 0 1.4em 1em;
+		color: #54595d;
+		width: auto;
+	}
+	
+	span.subpages {
+		display: block;
+    }}
+
+@media screen {
+	/* Vector screen styles */
+	/**
+	 * Minimum available screen width at which a device can be considered a mobile device
+	 * Many older feature phones have screens smaller than this value.
+	 * Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	/**
+	 * Minimum available screen width at which a device can be considered a tablet
+	 * The number is currently based on the device width of a Samsung Galaxy S5 mini and is low
+	 * enough to cover iPad (768px). Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	/**
+	 * Minimum available screen width at which a device can be considered a desktop
+	 * Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	/*
+	 * Any rules which should not be flipped automatically in right-to-left situations should be
+	 * prepended with @noflip in a comment block.
+	 *
+	 */
+	/* stylelint-disable selector-no-vendor-prefix, at-rule-no-unknown */
+	/* stylelint-enable selector-no-vendor-prefix, at-rule-no-unknown */
+	/* Framework */
+	html {
+	  font-size: 100%;
+	}
+	html,
+	body {
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  font-family: sans-serif;
+	}
+	body {
+	  background-color: #f6f6f6;
+	}
+	/* Content */
+	.mw-body,
+	.parsoid-body {
+	  background-color: #ffffff;
+	  color: #222222;
+	  padding: 1em;
+	  direction: ltr;
+	}
+	.mw-body,
+	#mw-data-after-content {
+	  margin-left: 10em;
+	}
+	.mw-body {
+	  /* Border on top, left, and bottom side */
+	  border: 1px solid #a7d7f9;
+	  border-right-width: 0;
+	  /* Merge the border with tabs' one (in their background image) */
+	  margin-top: -1px;
+	}
+	.mw-body h1,
+	.mw-body-content h1,
+	.mw-body-content h2 {
+	  margin-bottom: 0.25em;
+	  padding: 0;
+	  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+	  line-height: 1.3;
+	  /* Burmese (Myanmar) language headlines would be cropped with set `line-height` */
+	  /* See T193270 */
+	}
+	.mw-body h1:lang( ja ),
+	.mw-body-content h1:lang( ja ),
+	.mw-body-content h2:lang( ja ),
+	.mw-body h1:lang( he ),
+	.mw-body-content h1:lang( he ),
+	.mw-body-content h2:lang( he ),
+	.mw-body h1:lang( ko ),
+	.mw-body-content h1:lang( ko ),
+	.mw-body-content h2:lang( ko ) {
+	  /* See T65827 */
+	  font-family: sans-serif;
+	}
+	.mw-body h1:lang( my ),
+	.mw-body-content h1:lang( my ),
+	.mw-body-content h2:lang( my ) {
+	  line-height: normal;
+	}
+	.mw-body h1,
+	.mw-body-content h1 {
+	  font-size: 1.8em;
+	}
+	.mw-body .firstHeading {
+	  /* Change the default from mediawiki.skinning CSS to let indicators float into heading area */
+	  overflow: visible;
+	}
+	.mw-body .mw-indicators {
+	  float: right;
+	  font-size: 0.875em;
+	  line-height: 1.6;
+	  /* Ensure that this is displayed on top of .mw-body-content and clickable */
+	  position: relative;
+	  z-index: 1;
+	}
+	.mw-body .mw-indicator {
+	  display: inline-block;
+	}
+	.mw-body-content {
+	  position: relative;
+	  font-size: 0.875em;
+	  line-height: 1.6;
+	  z-index: 0;
+	}
+	.mw-body-content p {
+	  margin: 0.5em 0;
+	}
+	.mw-body-content h1 {
+	  margin-top: 1em;
+	}
+	.mw-body-content h2 {
+	  margin-top: 1em;
+	  font-size: 1.5em;
+	}
+	.mw-body-content h3,
+	.mw-body-content h4,
+	.mw-body-content h5,
+	.mw-body-content h6 {
+	  margin-top: 0.3em;
+	  margin-bottom: 0;
+	  padding-bottom: 0;
+	  line-height: 1.6;
+	}
+	.mw-body-content h3 {
+	  font-size: 1.2em;
+	}
+	.mw-body-content h3,
+	.mw-body-content h4 {
+	  font-weight: bold;
+	}
+	.mw-body-content h4,
+	.mw-body-content h5,
+	.mw-body-content h6 {
+	  font-size: 100%;
+	}
+	.mw-body-content .toc h2 {
+	  font-family: sans-serif;
+	  font-size: 100%;
+	}
+	/* Allow edit sections outside of mw-body-content (T160269) */
+	.mw-editsection,
+	.mw-editsection-like {
+	  font-family: sans-serif;
+	}
+	/* Hide empty portlets */
+	.emptyPortlet {
+	  display: none;
+	}
+	pre,
+	.mw-code {
+	  line-height: 1.3;
+	}
+	/* Site Notice (includes notices from CentralNotice extension) */
+	#siteNotice {
+	  font-size: 0.8em;
+	}
+	/* Personal */
+	#p-personal {
+	  position: absolute;
+	  top: 0.33em;
+	  right: 0.75em;
+	  /* Display on top of page tabs - bugs 37158, 48078 */
+	  z-index: 100;
+	}
+	#p-personal h3 {
+	  display: none;
+	}
+	#p-personal ul {
+	  list-style: none none;
+	  margin: 0;
+	  padding-left: 10em;
+	  /* Keep from overlapping logo */
+	}
+	#p-personal li {
+	  float: left;
+	  margin-left: 0.75em;
+	  padding-top: 0.5em;
+	  font-size: 0.75em;
+	  line-height: 1.16666667;
+	  white-space: nowrap;
+	}
+	/* Icon for registered user names & anonymous message */
+	#pt-anonuserpage,
+	#pt-userpage a {
+	  background-position: left 0.33333333em;
+	  background-repeat: no-repeat;
+	  background-size: 1.16666667em 1.16666667em;
+	  padding-top: 0.5em !important;
+	  padding-left: 16px !important;
+	}
+	#pt-userpage {
+	  padding-top: 0 !important;
+	}
+	#pt-userpage a {
+	  display: inline-block;
+	}
+	/* Show anonymous "Not logged in" text in gray */
+	#pt-anonuserpage {
+	  color: #54595d;
+	}
+	/* Search */
+	#p-search {
+	  float: left;
+	  margin-right: 0.5em;
+	  margin-left: 0.5em;
+	}
+	#p-search h3 {
+	  display: block;
+	  position: absolute !important;
+	  /* stylelint-disable-line declaration-no-important */
+	  clip: rect(1px, 1px, 1px, 1px);
+	  width: 1px;
+	  height: 1px;
+	  margin: -1px;
+	  border: 0;
+	  padding: 0;
+	  overflow: hidden;
+	}
+	#p-search form {
+	  margin: 0.5em 0 0;
+	}
+	#p-search {
+	  display: block;
+	  width: 13.2em;
+	  width: 20vw;
+	  /* responsive width */
+	  min-width: 5em;
+	  max-width: 20em;
+	  margin-top: 0;
+	  position: relative;
+	}
+	#p-search input {
+	  margin: 0;
+	}
+	#searchInput {
+	  background-color: #ffffff;
+	  background-color: rgba(255, 255, 255, 0.5);
+	  color: #000000;
+	  width: 100%;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  border: 1px solid #a2a9b1;
+	  border-radius: 2px;
+	  padding: 0.4em 1.84615385em 0.4em 0.4em;
+	  -webkit-box-shadow: inset 0 0 0 1px transparent;
+	  box-shadow: inset 0 0 0 1px transparent;
+	  font-size: 0.8125em;
+	  direction: ltr;
+	  -webkit-transition: border-color 250ms, box-shadow 250ms;
+	  -moz-transition: border-color 250ms, box-shadow 250ms;
+	  transition: border-color 250ms, box-shadow 250ms;
+	  -webkit-appearance: textfield;
+	}
+	#simpleSearch:hover #searchInput {
+	  border-color: #72777d;
+	}
+	#searchInput:focus,
+	#simpleSearch:hover #searchInput:focus {
+	  outline: 0;
+	  border-color: #3366cc;
+	  -webkit-box-shadow: inset 0 0 0 1px #3366cc, inset 0 0 0 2px #ffffff;
+	  box-shadow: inset 0 0 0 1px #3366cc, inset 0 0 0 2px #ffffff;
+	}
+	#searchInput::-webkit-input-placeholder {
+	  color: #72777d;
+	  opacity: 1;
+	}
+	#searchInput:-ms-input-placeholder {
+	  color: #72777d;
+	  opacity: 1;
+	}
+	#searchInput::-moz-placeholder {
+	  color: #72777d;
+	  opacity: 1;
+	}
+	#searchInput:-moz-placeholder {
+	  color: #72777d;
+	  opacity: 1;
+	}
+	#searchInput::placeholder {
+	  color: #72777d;
+	  opacity: 1;
+	}
+	#searchInput::-webkit-search-decoration,
+	#searchInput::-webkit-search-cancel-button,
+	#searchInput::-webkit-search-results-button,
+	#searchInput::-webkit-search-results-decoration {
+	  -webkit-appearance: textfield;
+	}
+	.searchButton,
+	#mw-searchButton {
+	  background-color: transparent;
+	  position: absolute;
+	  top: 1px;
+	  bottom: 1px;
+	  right: 1px;
+	  min-width: 24px;
+	  width: 1.84615385em;
+	  border: 0;
+	  padding: 0;
+	  cursor: pointer;
+	  font-size: 0.8125em;
+	  /* Opera 12 on RTL flips the text in a funny way without this. */
+	  /* @noflip */
+	  direction: ltr;
+	  /* Hide button text and replace it with the image. */
+	  text-indent: -99999px;
+	  white-space: nowrap;
+	  overflow: hidden;
+	  z-index: 1;
+	}
+	.searchButton {
+		background-image: url(images/search.png);
+		background-image: linear-gradient(transparent, transparent),url(images/search.svg);
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+	#mw-searchButton {
+	  z-index: 1;
+	}
+	/**
+	 * Styling for namespace tabs (page, discussion) and views (read, edit, view history, watch and other actions)
+	 */
+	/* Namespaces and Views */
+	.vectorTabs {
+	  background-position: left bottom;
+	  float: left;
+	  height: 2.5em;
+	  padding-left: 1px;
+	  /* Navigation Labels */
+	}
+	.vectorTabs h3 {
+	  display: none;
+	}
+	.vectorTabs ul {
+	  float: left;
+	  height: 100%;
+	  list-style: none none;
+	  margin: 0;
+	  padding: 0;
+	}
+	.vectorTabs li {
+	  background-position: left bottom;
+	  background-repeat: repeat-x;
+	  float: left;
+	  display: block;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  line-height: 1.125em;
+	  white-space: nowrap;
+	}
+	.vectorTabs li a {
+	  background-position: right bottom;
+	  color: #0645ad;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  display: block;
+	  float: left;
+	  height: 3.07692308em;
+	  position: relative;
+	  padding-top: 1.25em;
+	  padding-left: 8px;
+	  padding-right: 8px;
+	  font-size: 0.8125em;
+	  cursor: pointer;
+	}
+	.vectorTabs .new a,
+	.vectorTabs .new a:visited {
+	  color: #a55858;
+	}
+	.vectorTabs .selected {
+	  background: #ffffff;
+	}
+	.vectorTabs .selected a,
+	.vectorTabs .selected a:visited {
+	  color: #222222;
+	  text-decoration: none;
+	}
+	.vectorTabs .icon a {
+	  background-position: right bottom;
+	  background-repeat: no-repeat;
+	}
+	/* Variants and Actions */
+	.vectorTabs .mw-portlet {
+	  direction: ltr;
+	  float: left;
+	  cursor: pointer;
+	  position: relative;
+	  line-height: 1.125em;
+	}
+	.vectorMenu h3 {
+	  color: #444444;
+	  position: relative;
+	  display: block;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  padding-top: 1.25em;
+	  padding-left: 8px;
+	  padding-right: 1.84615385em;
+	  font-size: 0.8125em;
+	  font-weight: normal;
+	}
+	.vectorMenu h3:after {
+	  content: '';
+	  background-position: 100% 50%;
+	  background-repeat: no-repeat;
+	  position: absolute;
+	  top: 0.76923077em;
+	  right: 8px;
+	  bottom: 0;
+	  width: 1.23076923em;
+	  opacity: 0.85;
+	}
+	.vectorMenu h3:hover,
+	.vectorMenu h3:focus {
+	  color: #222222;
+	}
+	.vectorMenu h3:hover:after,
+	.vectorMenu h3:focus:after {
+	  opacity: 1;
+	}
+	.vectorMenu .menu {
+	  background-color: #ffffff;
+	  list-style: none none;
+	  min-width: 100%;
+	  position: absolute;
+	  top: 2.5em;
+	  left: -1px;
+	  margin: 0;
+	  border: 1px solid #a2a9b1;
+	  border-top-width: 0;
+	  padding: 0;
+	  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	  text-align: left;
+	  opacity: 0;
+	  visibility: hidden;
+	  -webkit-transition: opacity 100ms;
+	  -moz-transition: opacity 100ms;
+	  transition: opacity 100ms;
+	  z-index: 2;
+	}
+	.vectorMenu:hover .menu {
+	  opacity: 1;
+	  visibility: visible;
+	}
+	.vectorMenu .vectorMenuCheckbox:checked ~ .menu {
+	  opacity: 1;
+	  visibility: visible;
+	}
+	.vectorMenu li {
+	  padding: 0;
+	  margin: 0;
+	  text-align: left;
+	  line-height: 1em;
+	}
+	.vectorMenu li a {
+	  color: #0645ad;
+	  display: block;
+	  padding: 0.625em;
+	  white-space: nowrap;
+	  cursor: pointer;
+	  font-size: 0.8125em;
+	}
+	.vectorMenu .selected a,
+	.vectorMenu .selected a:visited {
+	  color: #222222;
+	  text-decoration: none;
+	}
+	#mw-head .vectorMenu h3 {
+	  background-position: right bottom;
+	  float: left;
+	  height: 3.07692308em;
+	  margin: 0 -1px 0 0;
+	  padding-right: 1.84615385em;
+	}
+	.vectorTabs,
+	.vectorTabs a,
+	#mw-head .vectorMenu h3 {
+	  background-image: linear-gradient(to bottom, rgba(167, 215, 249, 0) 0, #a7d7f9 100%);
+	  background-repeat: no-repeat;
+	  background-size: 1px 100%;
+	}
+	.vectorMenuCheckbox {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  z-index: 1;
+	  opacity: 0;
+	  width: 100%;
+	  height: 100%;
+	  margin: 0;
+	  padding: 0;
+	  display: none;
+	}
+	:not( :checked ) > .vectorMenuCheckbox {
+	  display: block;
+	}
+	.vectorMenuCheckbox:checked + h3 span:after {
+	  transform: scaleY(-1);
+	}
+	.vectorMenuCheckbox:focus + h3 {
+	  outline: dotted 1px;
+	  outline: auto -webkit-focus-ring-color;
+	}
+	@-webkit-keyframes rotate {
+	  from {
+	    -webkit-transform: rotate(0deg);
+	    -moz-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	  }
+	  to {
+	    -webkit-transform: rotate(360deg);
+	    -moz-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+	@-moz-keyframes rotate {
+	  from {
+	    -webkit-transform: rotate(0deg);
+	    -moz-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	  }
+	  to {
+	    -webkit-transform: rotate(360deg);
+	    -moz-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+	@keyframes rotate {
+	  from {
+	    -webkit-transform: rotate(0deg);
+	    -moz-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	  }
+	  to {
+	    -webkit-transform: rotate(360deg);
+	    -moz-transform: rotate(360deg);
+	    transform: rotate(360deg);
+	  }
+	}
+	/* Watch/Unwatch Icon Styling */
+	/* Only use icon if the menu item is not collapsed into the "More" dropdown
+	 * (in which case it is inside .vectorMenu instead of .vectorTabs). */
+	.vectorTabs .mw-watchlink.icon a {
+	  width: 2.15384615em;
+	  /* This hides the text but shows the background image */
+	  /* Must not exceed parent's height, otherwise the background disappears on Chrome (T196610) */
+	  height: 0;
+	  padding: 3.07692308em 0 0 0;
+	  overflow: hidden;
+	}
+	.vectorTabs .mw-watchlink.icon a:before {
+	  background-repeat: no-repeat;
+	  background-position: 50% 50%;
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  top: 1.07692308em;
+	  left: 0.38461538em;
+	  width: 1.23076923em;
+	  height: 1.23076923em;
+	}
+	
+	/* Hide, but keep accessible for screen-readers */
+	#mw-navigation h2 {
+	  position: absolute;
+	  top: -9999px;
+	}
+	.mw-jump-link:not( :focus ) {
+	  display: block;
+	  position: absolute !important;
+	  /* stylelint-disable-line declaration-no-important */
+	  clip: rect(1px, 1px, 1px, 1px);
+	  width: 1px;
+	  height: 1px;
+	  margin: -1px;
+	  border: 0;
+	  padding: 0;
+	  overflow: hidden;
+	}
+	/* Head */
+	#mw-page-base {
+	  background-position: bottom left;
+	  height: 5em;
+	  background-color: #fbfbfb;
+	  background-image: -webkit-gradient(linear, right top, right bottom, color-stop(50%, #ffffff), color-stop(100%, #f6f6f6));
+	  background-image: -webkit-linear-gradient(top, #ffffff 50%, #f6f6f6 100%);
+	  background-image: -moz-linear-gradient(top, #ffffff 50%, #f6f6f6 100%);
+	  background-image: linear-gradient(to bottom, #ffffff 50%, #f6f6f6 100%);
+	}
+	#mw-head-base {
+	  margin-top: -5em;
+	  margin-left: 10em;
+	  height: 5em;
+	}
+	#mw-head {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  width: 100%;
+	}
+	/* Navigation Containers */
+	#left-navigation {
+	  float: left;
+	  margin-left: 10em;
+	  margin-top: 2.5em;
+	  /* When right nav would overlap left nav, it's placed below it
+		   (normal CSS floats behavior). This rule ensures that no empty space
+		   is shown between them due to right nav's margin-top. Page layout
+		   is still broken, but at least the nav overlaps only the page title
+		   instead of half the content. */
+	  margin-bottom: -2.5em;
+	}
+	#right-navigation {
+	  float: right;
+	  margin-top: 2.5em;
+	}
+	/* Logo */
+	#p-logo {
+	  width: 10em;
+	  height: 160px;
+	}
+	#p-logo a {
+	  background-position: center center;
+	  background-repeat: no-repeat;
+	  display: block;
+	  width: 10em;
+	  height: 160px;
+	  text-decoration: none;
+	}
+	/* Panel */
+	#mw-panel {
+	  position: absolute;
+	  top: 0;
+	  width: 10em;
+	  left: 0;
+	  font-size: inherit;
+	  /* First sidebar portlet. Not using :first-of-type for IE<=8 support. */
+	}
+	#mw-panel .mw-portlet {
+	  margin: 0 0.6em 0 0.7em;
+	  padding: 0.25em 0;
+	  direction: ltr;
+	}
+	#mw-panel .mw-portlet-body h3 {
+	  color: #444444;
+	  font-weight: normal;
+	  margin: 0.5em 0 0 0.66666667em;
+	  padding: 0.25em 0;
+	  cursor: default;
+	  border: 0;
+	  font-size: 0.75em;
+	}
+	#mw-panel .mw-portlet-body {
+	  background-image: linear-gradient(to right, transparent 0, #c8ccd1 35%, #c8ccd1 70%, transparent 100%);
+	  background-repeat: no-repeat;
+	  background-size: 100% 1px;
+	  margin-left: 0.5em;
+	  padding-top: 0;
+	}
+	#mw-panel .mw-portlet-body ul {
+	  list-style: none none;
+	  margin: 0;
+	  padding-top: 0.3em;
+	}
+	#mw-panel .mw-portlet-body li {
+	  margin: 0;
+	  padding: 0.25em 0;
+	  font-size: 0.75em;
+	  line-height: 1.125em;
+	  word-wrap: break-word;
+	}
+	#mw-panel .mw-portlet-body li a {
+	  color: #0645ad;
+	}
+	#mw-panel .mw-portlet-body li a:visited {
+	  color: #0b0080;
+	}
+	#mw-panel #p-logo + .mw-portlet .mw-portlet-body {
+	  background-image: none;
+	  margin-top: 1em;
+	}
+	#mw-panel #p-logo + .mw-portlet-body h3 {
+	  display: none;
+	}
+	#mw-panel #p-logo + .mw-portlet-body {
+	  background-image: none;
+	  margin-left: 0.5em;
+	}
+	/* Footer */
+	#footer {
+	  margin-left: 10em;
+	  margin-top: 0;
+	  padding: 0.75em;
+	  direction: ltr;
+	}
+	#footer ul {
+	  list-style: none none;
+	  margin: 0;
+	  padding: 0;
+	}
+	#footer li {
+	  color: #222222;
+	  margin: 0;
+	  padding: 0.5em 0;
+	  font-size: 0.7em;
+	}
+	#footer-icons {
+	  float: right;
+	}
+	#footer-icons li {
+	  float: left;
+	  margin-left: 0.5em;
+	  line-height: 2;
+	  text-align: right;
+	}
+	#footer-info li {
+	  line-height: 1.4;
+	}
+	#footer-places li {
+	  float: left;
+	  margin-right: 1em;
+	  line-height: 2;
+	}
+}
+@media screen and ( min-width: 982px ) {
+	/* Vector screen styles for high definition displays */
+	/**
+	 * Minimum available screen width at which a device can be considered a mobile device
+	 * Many older feature phones have screens smaller than this value.
+	 * Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	/**
+	 * Minimum available screen width at which a device can be considered a tablet
+	 * The number is currently based on the device width of a Samsung Galaxy S5 mini and is low
+	 * enough to cover iPad (768px). Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	/**
+	 * Minimum available screen width at which a device can be considered a desktop
+	 * Number is prone to change with new information.
+	 * @since 1.31
+	 */
+	.mw-body,
+	#mw-head-base,
+	#left-navigation,
+	#mw-data-after-content,
+	#footer {
+	  margin-left: 11em;
+	}
+	.mw-body {
+	  padding: 1.25em 1.5em 1.5em 1.5em;
+	}
+	#footer {
+	  padding: 1.25em;
+	}
+	#mw-panel {
+	  padding-left: 0.5em;
+	}
+	#p-search {
+	  margin-right: 1em;
+	}
+	#p-personal {
+	  right: 1em;
+	}}/**
+ * Minimum available screen width at which a device can be considered a mobile device
+ * Many older feature phones have screens smaller than this value.
+ * Number is prone to change with new information.
+ * @since 1.31
+ */
+
+@media print {
+  /* These styles retain the existing typography in screen.less
+	In future (when deploying these styles) we may want to refactor skins.vector.styles
+	to apply certain styles in print as well as screen mode. */
+  .toc,
+  body {
+    padding: 10px;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  }
+  .printfooter,
+  #footer,
+  .thumb,
+  table,
+  ol,
+  dl,
+  ul,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: sans-serif;
+  }
+  img {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  }
+  a.not( .image ) {
+    border-bottom: 1px solid #aaa;
+  }
+  .firstHeading {
+    font-size: 25pt;
+    line-height: 28pt;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+  }
+  .firstHeading:before {
+    left: auto;
+    position: relative;
+  }
+  .firstHeading,
+  h2 {
+    overflow: hidden;
+    border-bottom: 2px solid #000000;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 30px 0 0;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0;
+    position: relative;
+  }
+  h2 {
+    font-size: 18pt;
+    line-height: 24pt;
+    margin-bottom: 0.25em;
+  }
+  h3 {
+    font-size: 13pt;
+    line-height: 20pt;
+  }
+  h4,
+  h5,
+  h6 {
+    font-size: 10pt;
+    line-height: 15pt;
+  }
+  p {
+    font-size: 10pt;
+    line-height: 16pt;
+    margin-top: 5px;
+    text-align: justify;
+  }
+  p:before {
+    content: '';
+    display: block;
+    width: 120pt;
+    overflow: hidden;
+  }
+  blockquote {
+    border-left: 2px solid #000000;
+    padding-left: 20px;
+  }
+  ol,
+  ul {
+    margin: 10px 0 0 1.6em;
+    padding: 0;
+  }
+  ol li,
+  ul li {
+    padding: 2px 0;
+    font-size: 10pt;
+  }
+  table ol li,
+  table ul li {
+    font-size: inherit;
+  }
+  .toc {
+    page-break-before: avoid;
+    page-break-after: avoid;
+    background: none;
+    border: 0;
+    display: table;
+  }
+  .toc a {
+    border: 0;
+    font-weight: normal;
+  }
+  .toc > ul > li {
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+  .toc ul {
+    margin: 0;
+    list-style: none;
+  }
+  .toc ul ul {
+    padding-left: 30px;
+  }
+  .toc li.toclevel-1 > a {
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  .mw-jump-link,
+  .toc .tocnumber {
+    display: none;
+  }
+  .printfooter {
+    margin-top: 10px;
+    border-top: 3px solid #000000;
+    padding-top: 10px;
+    font-size: 10pt;
+    clear: both;
+  }
+  #footer {
+    margin-top: 12px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 5px;
+  }
+  #footer-info {
+    margin: 0;
+    padding: 0;
+  }
+  #footer-info li {
+    color: #999;
+    list-style: none;
+    display: block;
+    padding-bottom: 10px;
+    font-size: 10pt;
+  }
+  #footer-info li a {
+    color: #999 !important;
+    /* stylelint-disable-line declaration-no-important */
+  }
+  #footer-info-lastmod {
+    color: #000000;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+}
