@@ -6,6 +6,7 @@
  * @ingroup Skins
  */
 class ExampleTemplate extends BaseTemplate {
+
 	public function getRawIndicators() {
 		$indicators = [];
 		foreach ( $this->data['indicators'] as $id => $content ) {
@@ -18,9 +19,14 @@ class ExampleTemplate extends BaseTemplate {
 	 * Outputs the entire contents of the page
 	 */
 	public function execute() {
-		$language = $this->getSkin()->getLanguage();
+		$skin = $this->getSkin();
+		$language = $skin->getLanguage();
+		$templateDir = $skin->getTemplateDirectory();
+		if ( $templateDir === false ) {
+			$templateDir = __DIR__ . '/../src';
+		}
 
-		$templateParser = new TemplateParser( __DIR__ . '/../src' );
+		$templateParser = new TemplateParser( $templateDir );
 		echo $this->get( 'headelement' ) . $templateParser->processTemplate( 'skin', [
 			'html-notices' => $this->getSiteNotice() . $this->getNewTalk(),
 			'indicators' =>  $this->getRawIndicators(),

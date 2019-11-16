@@ -27,7 +27,13 @@ getUserInput( 'What is the name of skin folder you are working in?' ).then( func
     const outincludesdir = `${outdir}/includes`;
     const outsrcdir = `${outdir}/src`;
     const outi18ndir = `${outdir}/i18n`;
-    console.log(`${uppercaseName} is a great name!`);
+
+    if (name && fs.existsSync(`${rootdir}/src/${name}`) ) {
+        console.log(`${uppercaseName} is a great name!`);
+    } else {
+        console.log(`Please make sure there there is a folder "${name} in the src/ folder!`);
+        return;
+    }
     i18n[`skinname-${name}`] = uppercaseName;
     i18n[`${name}-desc`] = 'A skin created by Dali without PHP.';
     qqq[`skinname-${name}`] = '{{optional}}';
@@ -49,7 +55,9 @@ getUserInput( 'What is the name of skin folder you are working in?' ).then( func
     );
     fs.writeFileSync(
         `${outincludesdir}/${skinName}.php`,
-        fs.readFileSync(`${rootdir}/includes/SkinExample.txt` ).toString()
+        fs.readFileSync(`${rootdir}/includes/SkinExample.php` ).toString()
+            .replace('ExampleTemplate', templateName)
+            .replace('SkinExample', skinName)
             .replace(/\<name\>/g, name)
             .replace(/\<uname\>/g, uppercaseName)
     );

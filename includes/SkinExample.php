@@ -4,10 +4,10 @@
  *
  * @ingroup Skins
  */
-class Skin<uname> extends SkinTemplate {
+class SkinExample extends SkinTemplate {
+	private $templateDir = false;
 	public $skinname = '<name>',
-		$stylename = '<uname>',
-		$template = '<uname>Template';
+		$template = 'ExampleTemplate';
 
 	/**
 	 * Add CSS via ResourceLoader
@@ -26,6 +26,20 @@ class Skin<uname> extends SkinTemplate {
 		$out->addModules( [
 			'skins.<name>.js'
 		] );
+	}
+
+	/**
+	 * @param string $dir of where templates are located
+	 */
+	public function setTemplateDirectory( $dir ) {
+		$this->templateDir = $dir;
+	}
+
+	/**
+	 * @return false|string
+	 */
+	public function getTemplateDirectory() {
+		return $this->templateDir;
 	}
 
 	/**
