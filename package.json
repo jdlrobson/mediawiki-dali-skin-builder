@@ -2,7 +2,7 @@
 	"private": true,
 	"scripts": {
 		"start": "export PORT=8142 && parcel dev-scripts/index.html",
-		"build": "node dev-scripts/build.js",
+		"build": "npm start & node dev-scripts/build.js",
 		"test": "grunt test"
 	},
 	"devDependencies": {
