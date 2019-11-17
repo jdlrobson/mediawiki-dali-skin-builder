@@ -21,10 +21,10 @@ class SkinExample extends SkinTemplate {
 		);
 
 		$out->addModuleStyles( [
-			'skins.<name>'
+			'skins.' . $this->skinname
 		] );
 		$out->addModules( [
-			'skins.<name>.js'
+			'skins.' . $this->skinname
 		] );
 	}
 
